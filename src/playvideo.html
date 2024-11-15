@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bingo live</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+    <link rel="stylesheet" href="./css/output.css">
+</head>
+<body>
+    <div class="container-full bg-bg-main  min-h-screen h-full">
+        <nav class="bg-black flex flex-col  gap-5  justify-between items-start lg:items-center px-10 py-3">
+            <div class="w-full flex gap-5 justify-between">
+                <a href=""><img src="./images/Logo.png" alt=""></a>
+                <div class="flex-1 justify-end">
+                    <!-- menu bar -->
+                    <div class="hidden flex-1 lg:flex justify-between items-center">
+                        <div class="flex flex-col sm:flex-row gap-4 text-redc text-lg flex-1 "> 
+                            <a href="">Free Watch</a>
+                            <div class="group relative text-lg font-normal">
+                                <button class="flex gap-2"><span>Movies</span> <img src="./images/arrow-down.svg" alt=""></button>
+                                <div class="hidden z-10 absolute left-0 border border-bg-main bg-black  rounded w-40  p-5 group-hover:flex gap-2 flex-col">
+                                   <a href="" class="hover:opacity-80">All Movies</a>
+                                   <a href="" class="hover:opacity-80">Recent Movies</a>
+                                </div>
+                            </div>
+                            <a href="">TV Shows</a>
+                            <a href="">Plan & Pricing</a>
+                        </div>
+                        <div class="flex gap-2">
+                            <div class=" flex justify-between items-center">
+                                <form action=""  class="bg-black flex justify-center items-center relative">
+                                    <input type="text" class="border bg-black rounded-full border-redc text-white opacity-50 focus:border-redc  py-2 px-3">
+                                    <button id="search" class="absolute right-2"><img class="size-6" src="./images/season-Icon.svg" alt=""></button>
+                                </form>
+                            </div>
+                            <a href="" class="text-white flex gap-1  items-center justify-start hover:opacity-50"><img class="size-6" src="./images/user-logo.svg" alt=""><span>Login</span></a>
+                        </div>
+                    </div>
+        
+        
+                    <!-- Mobile Menu Button -->
+                    <div class="lg:hidden flex items-center justify-end">
+                        <button id="menuButton" class="focus:outline-none">
+                          <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                          </svg>
+                        </button>
+                      </div>
+                </div>
+            </div>
+
+            <!-- mobile menu bar -->
+             <div id="mobileMenu" class="hidden flex-col gap-3">
+                <div class="flex flex-col gap-3 text-redc text-lg">
+                    <a href="">Free Watch</a>
+                    <div class="group  text-lg font-normal">
+                        <button class="flex gap-2 justify-between items-center"><span>Movies</span> <img src="./images/arrow-down.svg" alt=""></button>
+                        <div class="hidden z-10  ml-5 group-hover:flex gap-2 flex-col">
+                            <a href="" class="hover:opacity-80">All Movies</a>
+                            <a href="" class="hover:opacity-80">Recent Movies</a>
+                        </div>
+                    </div>
+                    <a href="">TV Shows</a>
+                    <a href="">Plan & Pricing</a>
+                </div>
+                <div class="flex gap-2">
+                    <div class=" flex justify-between items-center">
+                        <form action=""  class="bg-black flex justify-center items-center relative">
+                            <input type="text" class="border bg-black rounded-full border-redc text-white opacity-50 focus:border-redc  py-2 px-3">
+                            <button id="search" class="absolute right-2"><img class="size-6" src="./images/season-Icon.svg" alt=""></button>
+                        </form>
+                    </div>
+                    <a href="" class="text-white flex gap-1  items-center justify-start hover:opacity-50"><img class="size-6" src="./images/user-logo.svg" alt=""><span>Login</span></a>
+                </div>
+             </div>
+        </nav>
+
+
+        <section class=" py-10 relative h-[600px] w-[1500px]">
+            <video class="h-[600px] w-[1500px] "  controls>
+                <source src="./images/video.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+            <div class="absolute bg-red-500 top-[100px] left-[200px]  rounded-md h-3/5 w-3/4 p-10" style=" background: rgb(20,20,20);
+background: linear-gradient(0deg, rgba(20,20,20,0.695098107602416) 0%, rgba(20,20,20,0.7539216370141807) 100%); ">
+                <form action="" class="flex gap-5 flex-col justify-between ">
+                    <div class="space-y-3">
+                        <h2 class="text-xl font-semibold text-white opacity-100">Upgrate to Premium</h2>
+                        <p class="text-[#FFFFFF66] text-sm">Make the choice now to upgrade your plan to get full features of Silk Road TV.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-md text-white opactiy-70">What does premium include?</h3>
+                        <div class="flex gap-5">
+                            <div>
+                                <input type="checkbox" class="rounded-lg border-2 border-gray-500 p-2" />
+                                <label for="" class="text-white opacity-50 text-sm">Watch any movie and show.</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" class="rounded-lg border-2 border-gray-500 p-2" />
+                                <label for="" class="text-white opacity-50 text-sm">Watch any movie and show.</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" class="rounded-lg border-2 border-gray-500 p-2" />
+                                <label for="" class="text-white opacity-50 text-sm">Watch any movie and show.</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-10 w-full justify-between mb-[100px]">
+                        <div class="bg-black rounded-md w-full">
+                            <div class="flex justify-between items-center rounded-t-md bg-[#282b2b] checkbox_warp  py-2 px-3">
+                                <h2 class="text-md text-gray-400"><span class="text-white">Weekly</span> - Best for Weekly Entertainment</h2>
+                                <label class="inline-flex items-center space-x-2">
+                                    <input type="checkbox" class="hidden peer checkbox" active="0"/>
+                                    <span class="w-6 h-6 bg-gray-200 rounded-full peer-checked:bg-gray-500 peer-checked:border-transparent border-2 border-gray-500"></span>
+                                  </label>
+                            </div>
+                            <div class="text-white flex justify-between items-center p-4">
+                                <div>
+                                    <div class="text-2xl font-bold">$19.99</div>
+                                    <div class="text-sm opacity-50">Before - per week</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold">$19.99</div>
+                                    <div class="text-sm opacity-50">Now - per week</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-black rounded-md w-full">
+                            <div class="flex justify-between items-center bg-[#282b2b] checkbox_warp rounded-t-md py-2 px-3">
+                                <h2 class="text-md text-gray-400"><span class="text-white">Weekly</span> - Best for Weekly Entertainment</h2>
+                                <label class="inline-flex items-center space-x-2">
+                                    <input type="checkbox" class="hidden peer checkbox" status="0"/>
+                                    <span class="w-6 h-6 bg-gray-200 rounded-full peer-checked:bg-gray-500 peer-checked:border-transparent border-2 border-gray-500"></span>
+                                  </label>
+                            </div>
+                            <div class="text-white flex justify-between items-center p-4">
+                                <div>
+                                    <div class="text-2xl font-bold">$19.99</div>
+                                    <div class="text-sm opacity-50">Before - per week</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold">$19.99</div>
+                                    <div class="text-sm opacity-50">Now - per week</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <button class="bg-[#ED2024] py-3 rounded-full text-white">Upgrate Now</button>
+                    <div class="flex justify-center items-center">
+                        <button class="py-2 px-3 text-white flex items-center justify-between border gap-2"><span>Skip</span> <img src="./images/pause-play.svg" alt=""></button>
+                    </div>
+                </form>
+            </div>
+             
+         </section>
+
+
+            <footer class="bg-black p-5 text-white sm:flex sm:flex-col sm:items-center justify-center">
+                <div class="items-center">
+                    <ul class="flex flex-col sm:flex-row my-5 text-center gap-3 ">
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Terms Of Use</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">FAQ</a></li>
+                    </ul>
+                </div>
+                <p class="text-center opacity-50 text-sm">Copyright © Bingeware. All Rights Reserved.</p>
+            </footer>
+    
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+    <script>
+         // Toggle Mobile Menu
+        const menuButton = document.getElementById("menuButton");
+        const mobileMenu = document.getElementById("mobileMenu");
+        menuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      
+        
+
+
+        $(document).ready(function(){
+            $('.hero').slick({
+                autoplay: true,               // Enable autoplay
+                autoplaySpeed: 2000,          // Speed of autoplay
+                dots: false,                   // Show dots for navigation
+                arrows: false,                 // Show arrows for navigation
+                infinite: true,               // Loop the slides infinitely
+                speed: 500,                   // Slide transition speed
+            });
+
+            $('.slider').slick({
+                dots: false,
+                arrows: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 4,
+                centerMode: false,
+                variableWidth: true
+            });
+
+        });
+    </script>
+</body>
+</html>

@@ -4,30 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bingo live</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
     <link rel="stylesheet" href="./css/output.css">
 </head>
 <body>
     <div class="container-full bg-bg-main  min-h-screen h-full">
-        <nav class="bg-black flex justify-between items-center px-10 py-3">
-            <div><img src="./images/Logo.png" alt=""></div>
-            <ul class="flex gap-4 text-redc text-lg flex-1 ml-[50px]"> 
-                <li><a href="">Free Watch</a></li>
-                <li><a href="">Movies</a></li>
-                <li><a href="">TV Shows</a></li>
-                <li><a href="">Plan & Pricing</a></li>
-            </ul>
-            <div>
-                <form action="" id="search_form" class="bg-black flex justify-center items-center relative">
-                    <input type="text" class="border bg-black border-redColor text-white opacity-50 focus:border-redc  py-2 px-3">
-                    <button id="search" class="absolute right-2"><img class="size-6" src="./images/search-Icon.svg" alt=""></button>
-                </form>
-                <a href="" class="text-white flex gap-5  items-center justify-between"><img src="./images/user-logo.svg" alt=""><span>User</span></a>
+        <nav class="bg-black flex flex-col  gap-5  justify-between items-start lg:items-center px-10 py-3">
+            <div class="w-full flex gap-5 justify-between">
+                <a href=""><img src="./images/Logo.png" alt=""></a>
+                <div class="flex-1 justify-end">
+                    <!-- menu bar -->
+                    <div class="hidden flex-1 lg:flex justify-between items-center">
+                        <div class="flex flex-col sm:flex-row gap-4 text-redc text-lg flex-1 "> 
+                            <a href="">Free Watch</a>
+                            <div class="group relative text-lg font-normal">
+                                <button class="flex gap-2"><span>Movies</span> <img src="./images/arrow-down.svg" alt=""></button>
+                                <div class="hidden z-10 absolute left-0 border border-bg-main bg-black  rounded w-40  p-5 group-hover:flex gap-2 flex-col">
+                                   <a href="" class="hover:opacity-80">All Movies</a>
+                                   <a href="" class="hover:opacity-80">Recent Movies</a>
+                                </div>
+                            </div>
+                            <a href="">TV Shows</a>
+                            <a href="">Plan & Pricing</a>
+                        </div>
+                        <div class="flex gap-2">
+                            <div class=" flex justify-between items-center">
+                                <form action=""  class="bg-black flex justify-center items-center relative">
+                                    <input type="text" class="border bg-black rounded-full border-redc text-white opacity-50 focus:border-redc  py-2 px-3">
+                                    <button id="search" class="absolute right-2"><img class="size-6" src="./images/season-Icon.svg" alt=""></button>
+                                </form>
+                            </div>
+                            <a href="" class="text-white flex gap-1  items-center justify-start hover:opacity-50"><img class="size-6" src="./images/user-logo.svg" alt=""><span>Login</span></a>
+                        </div>
+                    </div>
+        
+        
+                    <!-- Mobile Menu Button -->
+                    <div class="lg:hidden flex items-center justify-end">
+                        <button id="menuButton" class="focus:outline-none">
+                          <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                          </svg>
+                        </button>
+                      </div>
+                </div>
             </div>
+
+            <!-- mobile menu bar -->
+             <div id="mobileMenu" class="hidden flex-col gap-3">
+                <div class="flex flex-col gap-3 text-redc text-lg">
+                    <a href="">Free Watch</a>
+                    <div class="group  text-lg font-normal">
+                        <button class="flex gap-2 justify-between items-center"><span>Movies</span> <img src="./images/arrow-down.svg" alt=""></button>
+                        <div class="hidden z-10  ml-5 group-hover:flex gap-2 flex-col">
+                            <a href="" class="hover:opacity-80">All Movies</a>
+                            <a href="" class="hover:opacity-80">Recent Movies</a>
+                        </div>
+                    </div>
+                    <a href="">TV Shows</a>
+                    <a href="">Plan & Pricing</a>
+                </div>
+                <div class="flex gap-2">
+                    <div class=" flex justify-between items-center">
+                        <form action=""  class="bg-black flex justify-center items-center relative">
+                            <input type="text" class="border bg-black rounded-full border-redc text-white opacity-50 focus:border-redc  py-2 px-3">
+                            <button id="search" class="absolute right-2"><img class="size-6" src="./images/season-Icon.svg" alt=""></button>
+                        </form>
+                    </div>
+                    <a href="" class="text-white flex gap-1  items-center justify-start hover:opacity-50"><img class="size-6" src="./images/user-logo.svg" alt=""><span>Login</span></a>
+                </div>
+             </div>
         </nav>
 
-        <section class="w-full">
-            <div class="w-full">
-                <img class="w-full" src="./images/slider.png" alt="">
+        <section class="w-full z-0">
+            <div class="w-full hero">
+                <img class="w-full" src="./images/slider1.png" alt="">
+                <img class="w-full" src="./images/slider2.png" alt="">
             </div>
         </section>
 
@@ -39,8 +93,9 @@
                         <h2 class="header">Latest Shows</h2>
                         <a href="" class="text-xl text-[#ED2024] hover:underline hover:underline-offset-4">View All</a>
                     </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-10 md:gap-5">
-                        <div class="space-y-5 bg-cardbg">
+              
+                    <div class="slider">
+                        <div class="space-y-5 bg-cardbg px-5">
                             <img class="w-full  rounded-md" src="./images/show1.png" alt="">
                             <div class="text-white flex justify-between items-center text-sm">
                                 <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/time-icon.png" alt=""><span>1h57min</span></button>
@@ -49,7 +104,7 @@
                         </div>
                         
     
-                        <div class="space-y-5 bg-cardbg">
+                        <div class="space-y-5 bg-cardbg px-5">
                             <img class="w-full  rounded-md" src="./images/show1.png" alt="">
                             <div class="text-white flex justify-between items-center text-sm">
                                 <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/time-icon.png" alt=""><span>1h57min</span></button>
@@ -57,7 +112,7 @@
                             </div>
                         </div>
     
-                        <div class="space-y-5 bg-cardbg">
+                        <div class="space-y-5 bg-cardbg px-5">
                             <img class="w-full  rounded-md" src="./images/show1.png" alt="">
                             <div class="text-white flex justify-between items-center text-sm">
                                 <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/time-icon.png" alt=""><span>1h57min</span></button>
@@ -65,7 +120,7 @@
                             </div>
                         </div>
     
-                        <div class="space-y-5 bg-cardbg">
+                        <div class="space-y-5 bg-cardbg px-5">
                             <img class="w-full  rounded-md" src="./images/show1.png" alt="">
                             <div class="text-white flex justify-between items-center text-sm">
                                 <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/time-icon.png" alt=""><span>1h57min</span></button>
@@ -73,13 +128,29 @@
                             </div>
                         </div>
     
-                        <div class="space-y-5 bg-cardbg">
+                        <div class="space-y-5 bg-cardbg px-5">
                             <img class="w-full  rounded-md" src="./images/show1.png" alt="">
                             <div class="text-white flex justify-between items-center text-sm">
                                 <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/time-icon.png" alt=""><span>1h57min</span></button>
                                 <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/eye2.svg" alt=""><span>2k</span></button>
                             </div>
-                        </div>     
+                        </div>
+                        
+                        <div class="space-y-5 bg-cardbg px-5">
+                            <img class="w-full  rounded-md" src="./images/show1.png" alt="">
+                            <div class="text-white flex justify-between items-center text-sm">
+                                <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/time-icon.png" alt=""><span>1h57min</span></button>
+                                <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/eye2.svg" alt=""><span>2k</span></button>
+                            </div>
+                        </div>
+    
+                        <div class="space-y-5 bg-cardbg px-5">
+                            <img class="w-full  rounded-md" src="./images/show1.png" alt="">
+                            <div class="text-white flex justify-between items-center text-sm">
+                                <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/time-icon.png" alt=""><span>1h57min</span></button>
+                                <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/eye2.svg" alt=""><span>2k</span></button>
+                            </div>
+                        </div>
     
                         
                     </div>
@@ -91,7 +162,7 @@
                         <a href="" class="text-xl text-[#ED2024] hover:underline hover:underline-offset-4">View All</a>
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-10 md:gap-5">
-                        <div class="space-y-5 bg-cardbg">
+                        <div class="space-y-5 bg-cardbg px-5">
                             <img class="w-full  rounded-md" src="./images/show1.png" alt="">
                             <div class="text-white flex justify-between items-center text-sm">
                                 <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/time-icon.png" alt=""><span>1h57min</span></button>
@@ -100,7 +171,7 @@
                         </div>
                         
     
-                        <div class="space-y-5 bg-cardbg">
+                        <div class="space-y-5 bg-cardbg px-5">
                             <img class="w-full  rounded-md" src="./images/show1.png" alt="">
                             <div class="text-white flex justify-between items-center text-sm">
                                 <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/time-icon.png" alt=""><span>1h57min</span></button>
@@ -108,7 +179,7 @@
                             </div>
                         </div>
     
-                        <div class="space-y-5 bg-cardbg">
+                        <div class="space-y-5 bg-cardbg px-5">
                             <img class="w-full  rounded-md" src="./images/show1.png" alt="">
                             <div class="text-white flex justify-between items-center text-sm">
                                 <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/time-icon.png" alt=""><span>1h57min</span></button>
@@ -116,7 +187,7 @@
                             </div>
                         </div>
     
-                        <div class="space-y-5 bg-cardbg">
+                        <div class="space-y-5 bg-cardbg px-5">
                             <img class="w-full  rounded-md" src="./images/show1.png" alt="">
                             <div class="text-white flex justify-between items-center text-sm">
                                 <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/time-icon.png" alt=""><span>1h57min</span></button>
@@ -124,7 +195,7 @@
                             </div>
                         </div>
     
-                        <div class="space-y-5 bg-cardbg">
+                        <div class="space-y-5 bg-cardbg px-5">
                             <img class="w-full  rounded-md" src="./images/show1.png" alt="">
                             <div class="text-white flex justify-between items-center text-sm">
                                 <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/time-icon.png" alt=""><span>1h57min</span></button>
@@ -142,7 +213,7 @@
                         <a href="" class="text-xl text-[#ED2024] hover:underline hover:underline-offset-4">View All</a>
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-10 md:gap-5">
-                        <div class="space-y-5 bg-cardbg">
+                        <div class="space-y-5 bg-cardbg px-5">
                             <img class="w-full  rounded-md" src="./images/show1.png" alt="">
                             <div class="text-white flex justify-between items-center text-sm">
                                 <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/time-icon.png" alt=""><span>1h57min</span></button>
@@ -151,7 +222,7 @@
                         </div>
                         
     
-                        <div class="space-y-5 bg-cardbg">
+                        <div class="space-y-5 bg-cardbg px-5">
                             <img class="w-full  rounded-md" src="./images/show1.png" alt="">
                             <div class="text-white flex justify-between items-center text-sm">
                                 <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/time-icon.png" alt=""><span>1h57min</span></button>
@@ -159,7 +230,7 @@
                             </div>
                         </div>
     
-                        <div class="space-y-5 bg-cardbg">
+                        <div class="space-y-5 bg-cardbg px-5">
                             <img class="w-full  rounded-md" src="./images/show1.png" alt="">
                             <div class="text-white flex justify-between items-center text-sm">
                                 <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/time-icon.png" alt=""><span>1h57min</span></button>
@@ -167,7 +238,7 @@
                             </div>
                         </div>
     
-                        <div class="space-y-5 bg-cardbg">
+                        <div class="space-y-5 bg-cardbg px-5">
                             <img class="w-full  rounded-md" src="./images/show1.png" alt="">
                             <div class="text-white flex justify-between items-center text-sm">
                                 <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/time-icon.png" alt=""><span>1h57min</span></button>
@@ -175,7 +246,7 @@
                             </div>
                         </div>
     
-                        <div class="space-y-5 bg-cardbg">
+                        <div class="space-y-5 bg-cardbg px-5">
                             <img class="w-full  rounded-md" src="./images/show1.png" alt="">
                             <div class="text-white flex justify-between items-center text-sm">
                                 <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/time-icon.png" alt=""><span>1h57min</span></button>
@@ -193,7 +264,7 @@
                         <a href="" class="text-xl text-[#ED2024] hover:underline hover:underline-offset-4">View All</a>
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-10 md:gap-5">
-                        <div class="space-y-5 bg-cardbg">
+                        <div class="space-y-5 bg-cardbg px-5">
                             <img class="w-full  rounded-md" src="./images/show1.png" alt="">
                             <div class="text-white flex justify-between items-center text-sm">
                                 <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/time-icon.png" alt=""><span>1h57min</span></button>
@@ -202,7 +273,7 @@
                         </div>
                         
     
-                        <div class="space-y-5 bg-cardbg">
+                        <div class="space-y-5 bg-cardbg px-5">
                             <img class="w-full  rounded-md" src="./images/show1.png" alt="">
                             <div class="text-white flex justify-between items-center text-sm">
                                 <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/time-icon.png" alt=""><span>1h57min</span></button>
@@ -210,7 +281,7 @@
                             </div>
                         </div>
     
-                        <div class="space-y-5 bg-cardbg">
+                        <div class="space-y-5 bg-cardbg px-5">
                             <img class="w-full  rounded-md" src="./images/show1.png" alt="">
                             <div class="text-white flex justify-between items-center text-sm">
                                 <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/time-icon.png" alt=""><span>1h57min</span></button>
@@ -218,7 +289,7 @@
                             </div>
                         </div>
     
-                        <div class="space-y-5 bg-cardbg">
+                        <div class="space-y-5 bg-cardbg px-5">
                             <img class="w-full  rounded-md" src="./images/show1.png" alt="">
                             <div class="text-white flex justify-between items-center text-sm">
                                 <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/time-icon.png" alt=""><span>1h57min</span></button>
@@ -226,7 +297,7 @@
                             </div>
                         </div>
     
-                        <div class="space-y-5 bg-cardbg">
+                        <div class="space-y-5 bg-cardbg px-5">
                             <img class="w-full  rounded-md" src="./images/show1.png" alt="">
                             <div class="text-white flex justify-between items-center text-sm">
                                 <button class="flex justify-center items-center gap-1 text-sm border border-grayColor rounded-full px-2 py-1 "><img src="./images/time-icon.png" alt=""><span>1h57min</span></button>
@@ -254,5 +325,41 @@
             </footer>
     
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+    <script>
+         // Toggle Mobile Menu
+        const menuButton = document.getElementById("menuButton");
+        const mobileMenu = document.getElementById("mobileMenu");
+        menuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      
+        
+
+
+        $(document).ready(function(){
+            $('.hero').slick({
+                autoplay: true,               // Enable autoplay
+                autoplaySpeed: 2000,          // Speed of autoplay
+                dots: false,                   // Show dots for navigation
+                arrows: false,                 // Show arrows for navigation
+                infinite: true,               // Loop the slides infinitely
+                speed: 500,                   // Slide transition speed
+            });
+
+            $('.slider').slick({
+                dots: false,
+                arrows: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 4,
+                centerMode: false,
+                variableWidth: true
+            });
+
+        });
+    </script>
 </body>
 </html>

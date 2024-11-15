@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bingo live</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+    <link rel="stylesheet" href="./css/output.css">
+</head>
+<body>
+    <div class="container-full bg-black  min-h-screen h-full">
+        <nav class="bg-black flex flex-col  gap-5  justify-between items-start lg:items-center px-10 py-3">
+            <div class="w-full flex gap-5 justify-between">
+                <a href=""><img src="./images/Logo.png" alt=""></a>
+                <div class="flex-1 justify-end">
+                    <!-- menu bar -->
+                    <div class="hidden flex-1 lg:flex justify-between items-center">
+                        <div class="flex flex-col sm:flex-row gap-4 text-redc text-lg flex-1 "> 
+                            <a href="">Free Watch</a>
+                            <div class="group relative text-lg font-normal">
+                                <button class="flex gap-2"><span>Movies</span> <img src="./images/arrow-down.svg" alt=""></button>
+                                <div class="hidden z-10 absolute left-0 border border-bg-main bg-black  rounded w-40  p-5 group-hover:flex gap-2 flex-col">
+                                   <a href="" class="hover:opacity-80">All Movies</a>
+                                   <a href="" class="hover:opacity-80">Recent Movies</a>
+                                </div>
+                            </div>
+                            <a href="">TV Shows</a>
+                            <a href="">Plan & Pricing</a>
+                        </div>
+                        <div class="flex gap-2">
+                            <div class=" flex justify-between items-center">
+                                <form action=""  class="bg-black flex justify-center items-center relative">
+                                    <input type="text" class="border bg-black rounded-full border-redc text-white opacity-50 focus:border-redc  py-2 px-3">
+                                    <button id="search" class="absolute right-2"><img class="size-6" src="./images/season-Icon.svg" alt=""></button>
+                                </form>
+                            </div>
+                            <a href="" class="text-white flex gap-1  items-center justify-start hover:opacity-50"><img class="size-6" src="./images/user-logo.svg" alt=""><span>Login</span></a>
+                        </div>
+                    </div>
+        
+        
+                    <!-- Mobile Menu Button -->
+                    <div class="lg:hidden flex items-center justify-end">
+                        <button id="menuButton" class="focus:outline-none">
+                          <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                          </svg>
+                        </button>
+                      </div>
+                </div>
+            </div>
+
+            <!-- mobile menu bar -->
+             <div id="mobileMenu" class="hidden flex-col gap-3">
+                <div class="flex flex-col gap-3 text-redc text-lg">
+                    <a href="">Free Watch</a>
+                    <div class="group  text-lg font-normal">
+                        <button class="flex gap-2 justify-between items-center"><span>Movies</span> <img src="./images/arrow-down.svg" alt=""></button>
+                        <div class="hidden z-10  ml-5 group-hover:flex gap-2 flex-col">
+                            <a href="" class="hover:opacity-80">All Movies</a>
+                            <a href="" class="hover:opacity-80">Recent Movies</a>
+                        </div>
+                    </div>
+                    <a href="">TV Shows</a>
+                    <a href="">Plan & Pricing</a>
+                </div>
+                <div class="flex gap-2">
+                    <div class=" flex justify-between items-center">
+                        <form action=""  class="bg-black flex justify-center items-center relative">
+                            <input type="text" class="border bg-black rounded-full border-redc text-white opacity-50 focus:border-redc  py-2 px-3">
+                            <button id="search" class="absolute right-2"><img class="size-6" src="./images/season-Icon.svg" alt=""></button>
+                        </form>
+                    </div>
+                    <a href="" class="text-white flex gap-1  items-center justify-start hover:opacity-50"><img class="size-6" src="./images/user-logo.svg" alt=""><span>Login</span></a>
+                </div>
+             </div>
+        </nav>
+
+  
+
+
+            <div class="p-10 sm:px-[100px]">
+
+                <h2 class="text-white text-center text-2xl  mb-10 ">Choose your pricing plan </h2>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-10">
+                    <div class="flex flex-col border  items-stretch">
+                        <div class="bg-white text-black ">
+                            <h2 class="text-2xl font-semibold py-5 mb-5 text-center">Binge Wire Plus</h2>
+                        </div>
+                        <div class="relative">
+                            <div class="h-20 bg-white"></div>
+                            <div class="h-20 bg-[#212121]"></div>
+                            <div class="h-40 w-40 bg-white border-4 border-[#212121] absolute top-0 bottom-0 left-1/2 -translate-x-1/2  mx-auto rounded-full flex flex-col items-center justify-center">
+                                <div class="font-bold text-3xl text-redc">$9.00</div>
+                                <p class="text-redc">Every Month</p>
+                            </div>
+                        </div>
+                        <div class="bg-[#212121] p-5 space-y-5 flex-1">
+                            <div class="flex gap-3 text-md text-white">
+                                <img src="./images/ok.svg" alt="">
+                                <span>ALL CHANNELS INCLUDED</span>
+                            </div>
+                            <div class="flex gap-3 text-md text-white">
+                                <img src="./images/ok.svg" alt="">
+                                <span>ALL CHANNELS INCLUDED</span>
+                            </div>
+                            <div class="flex gap-3 text-md text-white">
+                                <img src="./images/ok.svg" alt="">
+                                <span>ALL CHANNELS INCLUDED</span>
+                            </div>
+                            <div class="flex gap-3 text-md text-white">
+                                <img src="./images/ok.svg" alt="">
+                                <span>ALL CHANNELS INCLUDED</span>
+                            </div>
+                            <div class="flex gap-3 text-md text-white">
+                                <img src="./images/ok.svg" alt="">
+                                <span>ALL CHANNELS INCLUDED</span>
+                            </div>
+
+                        </div>
+                        <div class="border-t  p-5 bg-[#212121] flex">
+                            <a class="px-3 py-3 w-full bg-redc rounded-full text-white text-center">Select this plan</a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col border rounded-md items-stretch">
+                        <div class="bg-white text-black ">
+                            <h2 class="text-2xl font-semibold py-5 mb-5 text-center">Binge Wire Plus</h2>
+                        </div>
+                        <div class="relative">
+                            <div class="h-20 bg-white"></div>
+                            <div class="h-20 bg-[#212121]"></div>
+                            <div class="h-40 w-40 bg-white border-4 border-[#212121] absolute top-0 bottom-0 left-1/2 -translate-x-1/2  mx-auto rounded-full flex flex-col items-center justify-center">
+                                <div class="font-bold text-3xl text-redc">$9.00</div>
+                                <p class="text-redc">Every Month</p>
+                            </div>
+                        </div>
+                        <div class="bg-[#212121] p-5 space-y-5 flex-1">
+                           
+                            <div class="flex gap-3 text-md text-white">
+                                <img src="./images/ok.svg" alt="">
+                                <span>ALL CHANNELS INCLUDED</span>
+                            </div>
+                            <div class="flex gap-3 text-md text-white">
+                                <img src="./images/ok.svg" alt="">
+                                <span>ALL CHANNELS INCLUDED</span>
+                            </div>
+                            <div class="flex gap-3 text-md text-white">
+                                <img src="./images/ok.svg" alt="">
+                                <span>ALL CHANNELS INCLUDED</span>
+                            </div>
+                            <div class="flex gap-3 text-md text-white">
+                                <img src="./images/ok.svg" alt="">
+                                <span>ALL CHANNELS INCLUDED</span>
+                            </div>
+
+                        </div>
+                        <div class="border-t  p-5 bg-[#212121] flex">
+                            <a class="px-3 py-3 w-full bg-redc rounded-full text-white text-center">Select this plan</a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col border  items-stretch">
+                        <div class="bg-white text-black ">
+                            <h2 class="text-2xl font-semibold py-5 mb-5 text-center">Binge Wire Plus</h2>
+                        </div>
+                        <div class="relative">
+                            <div class="h-20 bg-white"></div>
+                            <div class="h-20 bg-[#212121]"></div>
+                            <div class="h-40 w-40 bg-white border-4 border-[#212121] absolute top-0 bottom-0 left-1/2 -translate-x-1/2  mx-auto rounded-full flex flex-col items-center justify-center">
+                                <div class="font-bold text-3xl text-redc">$9.00</div>
+                                <p class="text-redc">Every Month</p>
+                            </div>
+                        </div>
+                        <div class="bg-[#212121] p-5 space-y-5 flex-1">
+                            <div class="flex gap-3 text-md text-white">
+                                <img src="./images/ok.svg" alt="">
+                                <span>ALL CHANNELS INCLUDED</span>
+                            </div>
+                            <div class="flex gap-3 text-md text-white">
+                                <img src="./images/ok.svg" alt="">
+                                <span>ALL CHANNELS INCLUDED</span>
+                            </div>
+                            <div class="flex gap-3 text-md text-white">
+                                <img src="./images/ok.svg" alt="">
+                                <span>ALL CHANNELS INCLUDED</span>
+                            </div>
+                            <div class="flex gap-3 text-md text-white">
+                                <img src="./images/ok.svg" alt="">
+                                <span>ALL CHANNELS INCLUDED</span>
+                            </div>
+                            <div class="flex gap-3 text-md text-white">
+                                <img src="./images/ok.svg" alt="">
+                                <span>ALL CHANNELS INCLUDED</span>
+                            </div>
+
+                        </div>
+                        <div class="border-t  p-5 bg-[#212121] flex">
+                            <a class="px-3 py-3 w-full bg-redc rounded-full text-white text-center">Select this plan</a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col border rounded-md items-stretch">
+                        <div class="bg-white text-black ">
+                            <h2 class="text-2xl font-semibold py-5 mb-5 text-center">Binge Wire Plus</h2>
+                        </div>
+                        <div class="relative">
+                            <div class="h-20 bg-white"></div>
+                            <div class="h-20 bg-[#212121]"></div>
+                            <div class="h-40 w-40 bg-white border-4 border-[#212121] absolute top-0 bottom-0 left-1/2 -translate-x-1/2  mx-auto rounded-full flex flex-col items-center justify-center">
+                                <div class="font-bold text-3xl text-redc">$9.00</div>
+                                <p class="text-redc">Every Month</p>
+                            </div>
+                        </div>
+                        <div class="bg-[#212121] p-5 space-y-5 flex-1">
+                           
+                            <div class="flex gap-3 text-md text-white">
+                                <img src="./images/ok.svg" alt="">
+                                <span>ALL CHANNELS INCLUDED</span>
+                            </div>
+                            <div class="flex gap-3 text-md text-white">
+                                <img src="./images/ok.svg" alt="">
+                                <span>ALL CHANNELS INCLUDED</span>
+                            </div>
+                            <div class="flex gap-3 text-md text-white">
+                                <img src="./images/ok.svg" alt="">
+                                <span>ALL CHANNELS INCLUDED</span>
+                            </div>
+                            <div class="flex gap-3 text-md text-white">
+                                <img src="./images/ok.svg" alt="">
+                                <span>ALL CHANNELS INCLUDED</span>
+                            </div>
+
+                        </div>
+                        <div class="border-t  p-5 bg-[#212121] flex">
+                            <a class="px-3 py-3 w-full bg-redc rounded-full text-white text-center">Select this plan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="bg-black p-5 text-white sm:flex sm:flex-col sm:items-center justify-center">
+                <div class="items-center">
+                    <ul class="flex flex-col sm:flex-row my-5 text-center gap-3 ">
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Terms Of Use</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">FAQ</a></li>
+                    </ul>
+                </div>
+                <p class="text-center opacity-50 text-sm">Copyright © Bingeware. All Rights Reserved.</p>
+            </footer>
+    
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+    <script>
+         // Toggle Mobile Menu
+        const menuButton = document.getElementById("menuButton");
+        const mobileMenu = document.getElementById("mobileMenu");
+        menuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      
+        
+
+
+        $(document).ready(function(){
+            $('.hero').slick({
+                autoplay: true,               // Enable autoplay
+                autoplaySpeed: 2000,          // Speed of autoplay
+                dots: false,                   // Show dots for navigation
+                arrows: false,                 // Show arrows for navigation
+                infinite: true,               // Loop the slides infinitely
+                speed: 500,                   // Slide transition speed
+            });
+
+            $('.slider').slick({
+                dots: false,
+                arrows: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 4,
+                centerMode: false,
+                variableWidth: true
+            });
+
+        });
+    </script>
+</body>
+</html>
