@@ -113,10 +113,10 @@
     
                         <div class="flex flex-col sm:flex-row gap-10 w-full justify-between mb-[100px]">
                             <div class="bg-black rounded-md w-full">
-                                <div class="flex justify-between items-center rounded-t-md bg-[#282b2b] checkbox_warp  py-2 px-3">
+                                <div class="flex justify-between items-center rounded-t-md  bg-[#282b2b] checkbox_warp   py-2 px-3">
                                     <h2 class="text-md text-gray-400"><span class="text-white">Weekly</span> - Best for Weekly Entertainment</h2>
                                     <label class="inline-flex items-center space-x-2">
-                                        <input type="checkbox" class="hidden peer checkbox" active="0"/>
+                                        <input type="radio" name="plan" class="hidden peer checkbox" active="0"/>
                                         <span class="w-6 h-6 bg-gray-200 rounded-full peer-checked:bg-gray-500 peer-checked:border-transparent border-2 border-gray-500"></span>
                                       </label>
                                 </div>
@@ -135,7 +135,7 @@
                                 <div class="flex justify-between items-center bg-[#282b2b] checkbox_warp rounded-t-md py-2 px-3">
                                     <h2 class="text-md text-gray-400"><span class="text-white">Weekly</span> - Best for Weekly Entertainment</h2>
                                     <label class="inline-flex items-center space-x-2">
-                                        <input type="checkbox" class="hidden peer checkbox" status="0"/>
+                                        <input type="radio" name="plan"  class="hidden peer checkbox" status="0"/>
                                         <span class="w-6 h-6 bg-gray-200 rounded-full peer-checked:bg-gray-500 peer-checked:border-transparent border-2 border-gray-500"></span>
                                       </label>
                                 </div>
@@ -154,11 +154,11 @@
                         </div>
                         <button class="bg-[#ED2024] py-3 rounded-full text-white">Upgrate Now</button>
                         <div class="flex justify-center items-center">
-                            <button class="py-2 px-3 text-white flex items-center justify-between border gap-2"><span>Skip</span> <img src="./images/pause-play.svg" alt=""></button>
+                            <button class="py-2 px-3 text-white flex items-center justify-center border gap-2"><span>Skip</span> <img src="./images/pause-play.svg" alt=""></button>
                         </div>
                     </form>
 
-                    <button class="bg-redc hover:opacity-50 p-3 rounded-full absolute top-5 right-5 btn-popup"><img src="./images/x.svg" alt=""></button>
+                    <button class="bg-redc hover:opacity-50 p-3 rounded-full absolute top-5 right-5 btn-popup hover:space-x-110 duration-300"><img src="./images/x.svg" alt=""></button>
                 </div>
             </div>
              
@@ -177,6 +177,27 @@
         const mobileMenu = document.getElementById("mobileMenu");
         menuButton.addEventListener("click", () => {
           mobileMenu.classList.toggle("hidden");
+        });
+        
+        $(document).ready(function(){
+            let active = 0;
+            let ele = $('.checkbox_warp');
+            $(ele[active]).addClass('bg-[#ED2024]');
+            $(ele[active]).attr('active', 1);
+
+
+            $(document).on('click', '.checkbox', function(){
+                let activeCheck = $(this).parent().parent().attr('active');
+
+                if(activeCheck !== '1'){
+                    $(ele[active]).removeClass('bg-[#ED2024]');
+                    $(ele[active]).attr('active', 0);
+                    active ? active = 0 : active = 1;
+                    
+                    $(ele[active]).addClass('bg-[#ED2024]');
+                    $(ele[active]).attr('active', 1);
+                }
+            });
         });
       
         
@@ -207,6 +228,10 @@
                 centerMode: false,
                 variableWidth: true
             });
+
+
+
+           
 
         });
     </script>

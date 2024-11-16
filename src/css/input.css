@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.header {
-    @apply text-whitec font-semibold text-2xl;
+/* .header {
+    @apply text-whitec font-semibold text-2xl
 }
+
+.btn {
+    @apply bg-redc text-xl font-normal px-5 py-2 rounded hover:opacity-50 duration-600
+}  */
+
+
