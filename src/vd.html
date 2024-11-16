@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Red Checkbox</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-6">
+
+  <label for="custom-checkbox" class="inline-flex items-center cursor-pointer">
+    <!-- Hidden checkbox input -->
+    <input type="checkbox" id="custom-checkbox" class="hidden" />
+
+    <!-- Custom checkbox container -->
+    <div class="flex items-center justify-center w-6 h-6 mr-2 border-2 border-gray-300 rounded-full bg-white shadow-sm transition-colors duration-200 ease-in-out hover:border-red-400 focus:ring-2 focus:ring-red-500">
+      <!-- Custom checkmark (visible when checked) -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-red-500 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+      </svg>
+    </div>
+
+    <span class="text-gray-700">Accept Terms & Conditions</span>
+  </label>
+
+  <script>
+    // JavaScript to toggle checkmark visibility based on checkbox state
+    const checkbox = document.getElementById('custom-checkbox');
+    const checkmark = checkbox.nextElementSibling.querySelector('svg');
+
+    checkbox.addEventListener('change', () => {
+      if (checkbox.checked) {
+        checkmark.classList.remove('hidden');
+      } else {
+        checkmark.classList.add('hidden');
+      }
+    });
+  </script>
+
+</body>
+</html>

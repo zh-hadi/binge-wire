@@ -7,7 +7,8 @@ module.exports = {
         'whitec': '#FFFFFF',
         'redc': '#F50606',
         'black': "#000000",
-        'bg-main': "#272626"
+        'bg-main': "#272626",
+        'grayc' : '#383A3A'
       }
     },
   },
