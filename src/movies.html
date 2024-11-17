@@ -82,12 +82,25 @@
 
                 <section class="py-[50px]">
                     <div class="flex justify-between items-center text-white mb-10 ">
-                        <h2 class="text-whitec font-semibold text-2xl">Upcoming Movie</h2>
-                        <a href="" class="text-xl text-[#ED2024] hover:underline hover:underline-offset-4">View All</a>
+                        <h2 class="text-whitec font-semibold text-2xl">Movie</h2>
+                       <div class="flex gap-5">
+                          
+                            <div>
+                                <form action="">
+                                    <select name="filter" id="color" class="bg-black border border-redc focus:border-redec active:border-redc  py-2 px-3">
+                                        <option value="">- Filter movies -</option>
+                                        <option value="red">Recent Movies</option>
+                                        <option value="green">Green</option>
+                                        <option value="blue">Blue</option>
+                                    </select>
+                                    <button class="bg-redc py-2 px-3 rounded" type="submit">Filter</button>
+                                </form>
+                            </div>
+                       </div>
                     </div>
-                    <div class="slider-movies">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5">
                         <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
+                            <img class=" w-full  rounded-md hover:opacity-50 duration-700 h-[400px] sm:w-[300px]" src="./images/show1.png" alt="">
                            <div class="text-white flex justify-between items-center text-sm">
                                 <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
                                 <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
@@ -96,7 +109,7 @@
                         
     
                         <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
+                            <img class=" w-full  rounded-md hover:opacity-50 duration-700 h-[400px] sm:w-[300px]" src="./images/show1.png" alt="">
                            <div class="text-white flex justify-between items-center text-sm">
                                 <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
                                 <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
@@ -104,7 +117,7 @@
                         </div>
     
                         <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
+                            <img class=" w-full  rounded-md hover:opacity-50 duration-700 h-[400px] sm:w-[300px]" src="./images/show1.png" alt="">
                            <div class="text-white flex justify-between items-center text-sm">
                                 <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
                                 <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
@@ -112,7 +125,7 @@
                         </div>
     
                         <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
+                            <img class=" w-full  rounded-md hover:opacity-50 duration-700 h-[400px] sm:w-[300px]" src="./images/show1.png" alt="">
                            <div class="text-white flex justify-between items-center text-sm">
                                 <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
                                 <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
@@ -120,7 +133,7 @@
                         </div>
     
                         <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
+                            <img class=" w-full  rounded-md hover:opacity-50 duration-700 h-[400px] sm:w-[300px]" src="./images/show1.png" alt="">
                            <div class="text-white flex justify-between items-center text-sm">
                                 <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
                                 <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
@@ -128,7 +141,7 @@
                         </div>
                         
                         <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
+                            <img class=" w-full  rounded-md hover:opacity-50 duration-700 h-[400px] sm:w-[300px]" src="./images/show1.png" alt="">
                            <div class="text-white flex justify-between items-center text-sm">
                                 <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
                                 <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
@@ -136,142 +149,7 @@
                         </div>
     
                         <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
-                           <div class="text-white flex justify-between items-center text-sm">
-                                <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
-                                <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
-                            </div>
-                        </div>
-    
-                        
-                    </div>
-                 </section>
-
-                <section class="py-[50px]">
-                    <div class="flex justify-between items-center text-white mb-10 ">
-                        <h2 class="text-whitec font-semibold text-2xl">Recently Watch</h2>
-                        <a href="" class="text-xl text-[#ED2024] hover:underline hover:underline-offset-4">View All</a>
-                    </div>
-              
-                    <div class="slider-movies">
-                        <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
-                           <div class="text-white flex justify-between items-center text-sm">
-                                <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
-                                <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
-                            </div>
-                        </div>
-                        
-    
-                        <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
-                           <div class="text-white flex justify-between items-center text-sm">
-                                <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
-                                <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
-                            </div>
-                        </div>
-    
-                        <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
-                           <div class="text-white flex justify-between items-center text-sm">
-                                <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
-                                <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
-                            </div>
-                        </div>
-    
-                        <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
-                           <div class="text-white flex justify-between items-center text-sm">
-                                <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
-                                <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
-                            </div>
-                        </div>
-    
-                        <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
-                           <div class="text-white flex justify-between items-center text-sm">
-                                <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
-                                <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
-                            </div>
-                        </div>
-                        
-                        <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
-                           <div class="text-white flex justify-between items-center text-sm">
-                                <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
-                                <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
-                            </div>
-                        </div>
-    
-                        <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
-                           <div class="text-white flex justify-between items-center text-sm">
-                                <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
-                                <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
-                            </div>
-                        </div>
-    
-                        
-                    </div>
-                 </section>
-                
-                 <section class="py-[50px]">
-                    <div class="flex justify-between items-center text-white mb-10 ">
-                        <h2 class="text-whitec font-semibold text-2xl">Popular Movies </h2>
-                        <a href="" class="text-xl text-[#ED2024] hover:underline hover:underline-offset-4">View All</a>
-                    </div>
-                    <div class="slider-movies">
-                        <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
-                           <div class="text-white flex justify-between items-center text-sm">
-                                <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
-                                <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
-                            </div>
-                        </div>
-                        
-    
-                        <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
-                           <div class="text-white flex justify-between items-center text-sm">
-                                <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
-                                <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
-                            </div>
-                        </div>
-    
-                        <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
-                           <div class="text-white flex justify-between items-center text-sm">
-                                <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
-                                <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
-                            </div>
-                        </div>
-    
-                        <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
-                           <div class="text-white flex justify-between items-center text-sm">
-                                <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
-                                <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
-                            </div>
-                        </div>
-    
-                        <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
-                           <div class="text-white flex justify-between items-center text-sm">
-                                <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
-                                <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
-                            </div>
-                        </div>
-                        
-                        <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
-                           <div class="text-white flex justify-between items-center text-sm">
-                                <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
-                                <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
-                            </div>
-                        </div>
-    
-                        <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
+                            <img class=" w-full  rounded-md hover:opacity-50 duration-700 h-[400px] sm:w-[300px]" src="./images/show1.png" alt="">
                            <div class="text-white flex justify-between items-center text-sm">
                                 <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
                                 <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
@@ -282,72 +160,7 @@
                     </div>
                  </section>
 
-                 <section class="py-[50px]">
-                    <div class="flex justify-between items-center text-white mb-10 ">
-                        <h2 class="text-whitec font-semibold text-2xl">Latest Movies </h2>
-                        <a href="" class="text-xl text-[#ED2024] hover:underline hover:underline-offset-4">View All</a>
-                    </div>
-                    <div class="slider-movies">
-                        <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
-                           <div class="text-white flex justify-between items-center text-sm">
-                                <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
-                                <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
-                            </div>
-                        </div>
-                        
-    
-                        <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
-                           <div class="text-white flex justify-between items-center text-sm">
-                                <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
-                                <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
-                            </div>
-                        </div>
-    
-                        <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
-                           <div class="text-white flex justify-between items-center text-sm">
-                                <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
-                                <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
-                            </div>
-                        </div>
-    
-                        <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
-                           <div class="text-white flex justify-between items-center text-sm">
-                                <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
-                                <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
-                            </div>
-                        </div>
-    
-                        <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
-                           <div class="text-white flex justify-between items-center text-sm">
-                                <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
-                                <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
-                            </div>
-                        </div>
-                        
-                        <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
-                           <div class="text-white flex justify-between items-center text-sm">
-                                <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
-                                <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
-                            </div>
-                        </div>
-    
-                        <div class="space-y-5 bg-cardbg px-5">
-                            <img class=" w-full  rounded-md hover:opacity-50 duration-700" src="./images/show1.png" alt="">
-                           <div class="text-white flex justify-between items-center text-sm">
-                                <a class=" text-sm border border-grayColor hover:bg-red-500 duration-300 hover:opacity-80  rounded-full px-2 py-1 cursor-pointer">1h57min</a>
-                                <a class="opacity-50 group-hover:opacity-80 text-sm duration-700 cursor-pointer ">Show</a>
-                            </div>
-                        </div>
-    
-                        
-                    </div>
-                 </section>
+
 
                
                 
